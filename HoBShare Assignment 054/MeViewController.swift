@@ -14,13 +14,19 @@ class MeViewController: HoBShareViewController,UITextFieldDelegate {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var latituteLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
-    @IBAction func saveButtonPressed(sender:AnyObject)
-    {
+    
+    
+    @IBAction func saveButtonPressed(sender: AnyObject) {
         if validate() == true
         {
             submit()
         }
+        else
+        {
+            self.showError("Did you enter a username?")
+        }
     }
+    
     
     override func viewDidLoad() {
         textField.delegate = self
@@ -48,7 +54,7 @@ class MeViewController: HoBShareViewController,UITextFieldDelegate {
         }
         else
         {
-            self.showError("Did you enter a User Name?")
+            self.showError("Did you enter a username?")
         }
         return true
     }
@@ -58,16 +64,18 @@ class MeViewController: HoBShareViewController,UITextFieldDelegate {
         let requestUser = User(userName:textField.text!)
         requestUser.latitude = currentLocation.coordinate.latitude
         requestUser.longitude = currentLocation.coordinate.longitude
+        
         UserDP().getAccountForUser(requestUser){(returnedUser) in
             
-            if requestUser.status.code == 0
+            if returnedUser.status.code == 0
             {
                 self.myHobbies = returnedUser.hobbies
                 NSUserDefaults.standardUserDefaults().setValue(returnedUser.userId, forKey: "CurrentUserId")
-                NSUserDefaults.standardUserDefaults().synchronize()
+                NSUserDefaults().synchronize()
             }
             else
             {
+
                 self.showError(returnedUser.status.statusDescription!)
             }
         }

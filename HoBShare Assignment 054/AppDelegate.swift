@@ -13,28 +13,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    func applicationDidFinishLaunching(application: UIApplication) {
+    func application(application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         if NSUserDefaults.standardUserDefaults().objectForKey("MyHobbies") == nil
         {
             let myHobbies = [Hobby(hobbyName:"Video Games"),Hobby(hobbyName:"Apple"),Hobby(hobbyName:"Computers")]
             let HobbyData = NSKeyedArchiver.archivedDataWithRootObject(myHobbies)
-//            let HobbyData = NSKeyedArchiver.archivedData(withRootObject: myHobbies)
             NSUserDefaults.standardUserDefaults().registerDefaults(["MyHobbies":HobbyData])
             NSUserDefaults.standardUserDefaults().synchronize()
         }
         if NSUserDefaults.standardUserDefaults().objectForKey("CurrentUserId") == nil
-            //            .object(forKey: "CurrentUserId")==nil
         {
             NSUserDefaults.standardUserDefaults().registerDefaults(["CurrentUserId":""])
             NSUserDefaults.standardUserDefaults().synchronize()
         }
-        
-//        return true
+        return true
     }
-//        func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//        // Override point for customization after application launch.
-//        
-//    }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -58,6 +52,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+//    func applicationDidFinishLaunching(application: UIApplication) {
+        //        if NSUserDefaults.standardUserDefaults().objectForKey("MyHobbies") == nil
+        //        {
+        //            let myHobbies = [Hobby(hobbyName:"Video Games"),Hobby(hobbyName:"Apple"),Hobby(hobbyName:"Computers")]
+        //            let HobbyData = NSKeyedArchiver.archivedDataWithRootObject(myHobbies)
+        //            NSUserDefaults.standardUserDefaults().registerDefaults(["MyHobbies":HobbyData])
+        //            NSUserDefaults.standardUserDefaults().synchronize()
+        //        }
+        //        if NSUserDefaults.standardUserDefaults().objectForKey("CurrentUserId") == nil
+        //        {
+        //            NSUserDefaults.standardUserDefaults().registerDefaults(["CurrentUserId":""])
+        //            NSUserDefaults.standardUserDefaults().synchronize()
+        //        }
+        //
+        //    }
 }
 

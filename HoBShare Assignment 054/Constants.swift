@@ -8,4 +8,4 @@
 
 import Foundation
 
-let kAppTitle = "HobbyShare"
+let kAppTitle = "HobShare"

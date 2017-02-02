@@ -2,7 +2,7 @@
 //  HobbyCollectionViewCell.swift
 //  HoBShare Assignment 054
 //
-//  Created by Sahil Dhawan on 26/01/17.
+//  Created by Sahil Dhawan on 02/02/17.
 //  Copyright © 2017 Sahil Dhawan. All rights reserved.
 //
 

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BA25459B1E37B90700F463B5 /* Modals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA25459A1E37B90700F463B5 /* Modals.swift */; };
 		BA25459D1E37B94C00F463B5 /* DataProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA25459C1E37B94C00F463B5 /* DataProviders.swift */; };
-		BAA6298E1E3A5617001ADDCE /* HobbyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA6298D1E3A5617001ADDCE /* HobbyCollectionViewCell.swift */; };
+		BA5297A21E43550200C98B03 /* HobbyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5297A11E43550200C98B03 /* HobbyCollectionViewCell.swift */; };
 		BABBC1951E3DF93B00FF1C37 /* SFLConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBC1931E3DF93B00FF1C37 /* SFLConnection.swift */; };
 		BABBC1971E3DFC9A00FF1C37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBC1961E3DFC9A00FF1C37 /* Constants.swift */; };
 		BABBC1991E3E029000FF1C37 /* SFLBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBC1981E3E029000FF1C37 /* SFLBaseModel.swift */; };
@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		BA25459A1E37B90700F463B5 /* Modals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modals.swift; sourceTree = "<group>"; };
 		BA25459C1E37B94C00F463B5 /* DataProviders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProviders.swift; sourceTree = "<group>"; };
-		BAA6298D1E3A5617001ADDCE /* HobbyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HobbyCollectionViewCell.swift; sourceTree = "<group>"; };
+		BA5297A11E43550200C98B03 /* HobbyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HobbyCollectionViewCell.swift; sourceTree = "<group>"; };
 		BABBC1931E3DF93B00FF1C37 /* SFLConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SFLConnection.swift; path = ../../../Downloads/StarterKit/SFLConnection.swift; sourceTree = "<group>"; };
 		BABBC1961E3DFC9A00FF1C37 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BABBC1981E3E029000FF1C37 /* SFLBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SFLBaseModel.swift; path = ../../../Downloads/StarterKit/SFLBaseModel.swift; sourceTree = "<group>"; };
@@ -61,6 +61,7 @@
 		BADAE3DB1E2B7FE00019DE01 = {
 			isa = PBXGroup;
 			children = (
+				BA5297A11E43550200C98B03 /* HobbyCollectionViewCell.swift */,
 				BABBC1981E3E029000FF1C37 /* SFLBaseModel.swift */,
 				BABBC1931E3DF93B00FF1C37 /* SFLConnection.swift */,
 				BADAE3E61E2B7FE00019DE01 /* HoBShare Assignment 054 */,
@@ -83,7 +84,6 @@
 				BADAE3E71E2B7FE00019DE01 /* AppDelegate.swift */,
 				BADAE3E91E2B7FE00019DE01 /* ViewController.swift */,
 				BADAE3EB1E2B7FE00019DE01 /* Main.storyboard */,
-				BAA6298D1E3A5617001ADDCE /* HobbyCollectionViewCell.swift */,
 				BADAE4081E2B959A0019DE01 /* HoBShareViewController.swift */,
 				BABBC1961E3DFC9A00FF1C37 /* Constants.swift */,
 				BADAE40C1E2B967A0019DE01 /* EditHoBShareViewController.swift */,
@@ -182,6 +182,7 @@
 				BADAE40B1E2B95D80019DE01 /* MeViewController.swift in Sources */,
 				BA25459D1E37B94C00F463B5 /* DataProviders.swift in Sources */,
 				BADAE3EA1E2B7FE00019DE01 /* ViewController.swift in Sources */,
+				BA5297A21E43550200C98B03 /* HobbyCollectionViewCell.swift in Sources */,
 				BADAE4091E2B959A0019DE01 /* HoBShareViewController.swift in Sources */,
 				BADAE40D1E2B967A0019DE01 /* EditHoBShareViewController.swift in Sources */,
 				BADAE3E81E2B7FE00019DE01 /* AppDelegate.swift in Sources */,
@@ -189,7 +190,6 @@
 				BABBC1951E3DF93B00FF1C37 /* SFLConnection.swift in Sources */,
 				BADAE40F1E2B96830019DE01 /* NeighboursViewController.swift in Sources */,
 				BA25459B1E37B90700F463B5 /* Modals.swift in Sources */,
-				BAA6298E1E3A5617001ADDCE /* HobbyCollectionViewCell.swift in Sources */,
 				BABBC1971E3DFC9A00FF1C37 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

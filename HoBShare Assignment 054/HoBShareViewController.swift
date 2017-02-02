@@ -136,8 +136,8 @@ class HoBShareViewController: UIViewController,CLLocationManagerDelegate,UIColle
     
     func saveHobbiesToUserDefaults()
     {
-        let HobbyData = NSKeyedArchiver.archivedDataWithRootObject(myHobbies!)
-        NSUserDefaults.standardUserDefaults().setValue(HobbyData,forKey:"myHobbies")
+        let hobbyData = NSKeyedArchiver.archivedDataWithRootObject(myHobbies!)
+        NSUserDefaults.standardUserDefaults().setValue(hobbyData,forKey:"MyHobbies")
         NSUserDefaults.standardUserDefaults().synchronize()
     }
     
