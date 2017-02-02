@@ -9,3 +9,4 @@
 import Foundation
 
 let kAppTitle = "HobShare"
+let kMaxHobbies = 3

@@ -10,6 +10,7 @@
 		BA25459B1E37B90700F463B5 /* Modals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA25459A1E37B90700F463B5 /* Modals.swift */; };
 		BA25459D1E37B94C00F463B5 /* DataProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA25459C1E37B94C00F463B5 /* DataProviders.swift */; };
 		BA5297A21E43550200C98B03 /* HobbyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5297A11E43550200C98B03 /* HobbyCollectionViewCell.swift */; };
+		BA5297A61E43741400C98B03 /* HobbiesCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5297A51E43741300C98B03 /* HobbiesCollectionViewHeader.swift */; };
 		BABBC1951E3DF93B00FF1C37 /* SFLConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBC1931E3DF93B00FF1C37 /* SFLConnection.swift */; };
 		BABBC1971E3DFC9A00FF1C37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBC1961E3DFC9A00FF1C37 /* Constants.swift */; };
 		BABBC1991E3E029000FF1C37 /* SFLBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBC1981E3E029000FF1C37 /* SFLBaseModel.swift */; };
@@ -29,6 +30,7 @@
 		BA25459A1E37B90700F463B5 /* Modals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modals.swift; sourceTree = "<group>"; };
 		BA25459C1E37B94C00F463B5 /* DataProviders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProviders.swift; sourceTree = "<group>"; };
 		BA5297A11E43550200C98B03 /* HobbyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HobbyCollectionViewCell.swift; sourceTree = "<group>"; };
+		BA5297A51E43741300C98B03 /* HobbiesCollectionViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HobbiesCollectionViewHeader.swift; sourceTree = "<group>"; };
 		BABBC1931E3DF93B00FF1C37 /* SFLConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SFLConnection.swift; path = ../../../Downloads/StarterKit/SFLConnection.swift; sourceTree = "<group>"; };
 		BABBC1961E3DFC9A00FF1C37 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BABBC1981E3E029000FF1C37 /* SFLBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SFLBaseModel.swift; path = ../../../Downloads/StarterKit/SFLBaseModel.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		BADAE3DB1E2B7FE00019DE01 = {
 			isa = PBXGroup;
 			children = (
+				BA5297A51E43741300C98B03 /* HobbiesCollectionViewHeader.swift */,
 				BA5297A11E43550200C98B03 /* HobbyCollectionViewCell.swift */,
 				BABBC1981E3E029000FF1C37 /* SFLBaseModel.swift */,
 				BABBC1931E3DF93B00FF1C37 /* SFLConnection.swift */,
@@ -185,6 +188,7 @@
 				BA5297A21E43550200C98B03 /* HobbyCollectionViewCell.swift in Sources */,
 				BADAE4091E2B959A0019DE01 /* HoBShareViewController.swift in Sources */,
 				BADAE40D1E2B967A0019DE01 /* EditHoBShareViewController.swift in Sources */,
+				BA5297A61E43741400C98B03 /* HobbiesCollectionViewHeader.swift in Sources */,
 				BADAE3E81E2B7FE00019DE01 /* AppDelegate.swift in Sources */,
 				BABBC1991E3E029000FF1C37 /* SFLBaseModel.swift in Sources */,
 				BABBC1951E3DF93B00FF1C37 /* SFLConnection.swift in Sources */,

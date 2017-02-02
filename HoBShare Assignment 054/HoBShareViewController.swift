@@ -40,6 +40,7 @@ class HoBShareViewController: UIViewController,CLLocationManagerDelegate,UIColle
             locationManager.stopUpdatingLocation()
             locationManager.startUpdatingLocation()
         }
+        getHobbies()
     }
     
     func locationManager(manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -107,7 +108,7 @@ class HoBShareViewController: UIViewController,CLLocationManagerDelegate,UIColle
             let key = Array(availableHobbies.keys)[indexPath.section]
             let hobbies = availableHobbies[key]
             let hobby = hobbies![indexPath.item]
-            cell.HobbyLabel.text = hobby.hobbyName
+            cell.HobbyLabel.text = hobby.hobbyName!
         }
         return cell
     }
@@ -150,5 +151,13 @@ class HoBShareViewController: UIViewController,CLLocationManagerDelegate,UIColle
         })
         alert.addAction(okAction)
         self.presentViewController(alert,animated: true,completion: nil)
+    }
+    func getHobbies()
+    {
+        if let data = NSUserDefaults.standardUserDefaults().objectForKey("MyHobbies") as? NSData
+        {
+            let savedHobbies = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! Array<Hobby>
+            myHobbies = savedHobbies
+        }
     }
 }
