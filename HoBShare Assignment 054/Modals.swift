@@ -24,22 +24,16 @@ extension Array
         return returnValue
         
     }
-    func toString()->String?
+    func toString()->String
     {
-        var returnString = ""
+        var returnString = (self[0] as!Hobby).hobbyName!
         if allValueAreHobbies == true
         {
-            for i in 0...self.count-1
+            for i in 1...self.count - 1
             {
                 let value = self[i] as! Hobby
-                if i==0
-                {
-                    returnString += value.hobbyName!
-                }
-                else
-                {
-                    returnString += returnString  + ", " + value.hobbyName!
-                }
+                
+                    returnString  +=  ", " + value.hobbyName!
             }
         }
         return returnString
@@ -139,8 +133,8 @@ class User: SFLBaseModel,JSONSerializable,MKAnnotation {
         get
         {
             var hobbiesAsString = ""
-            print("\(self.userName!)" + ":" + hobbies.toString()!)
-            hobbiesAsString = hobbies.toString()!
+            print("\(self.userName!)" + ":" + hobbies.toString())
+            hobbiesAsString = hobbies.toString()
             return hobbiesAsString
         }
     }
