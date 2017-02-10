@@ -7,8 +7,45 @@
 //
 
 import Foundation
+import MapKit
 
-class User: SFLBaseModel,JSONSerializable {
+extension Array
+{
+    var allValueAreHobbies:Bool
+    {
+        var returnValue = true
+        for value in self
+        {
+            if value is Hobby == false
+            {
+                returnValue = false
+            }
+        }
+        return returnValue
+        
+    }
+    func toString()->String?
+    {
+        var returnString = ""
+        if allValueAreHobbies == true
+        {
+            for i in 0...self.count-1
+            {
+                let value = self[i] as! Hobby
+                if i==0
+                {
+                    returnString += value.hobbyName!
+                }
+                else
+                {
+                    returnString += returnString  + ", " + value.hobbyName!
+                }
+            }
+        }
+        return returnString
+    }
+}
+class User: SFLBaseModel,JSONSerializable,MKAnnotation {
     
     var userId : String?
     var userName : String?
@@ -26,6 +63,13 @@ class User: SFLBaseModel,JSONSerializable {
         super.init()
         self.delegate = self
         self.userName = userName
+    }
+    convenience  init (userName:String,hobbies:[Hobby],lat:Double,long:Double)
+    {
+        self.init(userName:userName)
+        self.hobbies = hobbies
+        self.latitude = lat
+        self.longitude = long
     }
     override func getJSONDictionary() -> NSDictionary
     {
@@ -52,7 +96,7 @@ class User: SFLBaseModel,JSONSerializable {
         var jsonSafeHobbiesArray = [String]()
         
         for hobby in self.hobbies{
-                jsonSafeHobbiesArray.append(hobby.hobbyName!)
+            jsonSafeHobbiesArray.append(hobby.hobbyName!)
         }
         dict.setValue(jsonSafeHobbiesArray, forKey: "Hobbies")
         
@@ -75,13 +119,59 @@ class User: SFLBaseModel,JSONSerializable {
         {
             self.hobbies = Hobby.deserializeHobbies(hobbies)
         }
-
+        
+    }
+    var coordinate:CLLocationCoordinate2D
+        {
+        get{
+            return CLLocationCoordinate2D(latitude: self.latitude!,longitude: self.longitude!)
+        }
+    }
+    var title:String?
+        {
+        get
+        {
+            return self.userName
+        }
+    }
+    var subtitle: String?
+        {
+        get
+        {
+            var hobbiesAsString = ""
+            print("\(self.userName!)" + ":" + hobbies.toString()!)
+            hobbiesAsString = hobbies.toString()!
+            return hobbiesAsString
+        }
     }
 }
 
-
-class ListofUser: SFLBaseModel,JSONSerializable {
-    
+class ListofUsers: SFLBaseModel,JSONSerializable {
+    var users = [User]()
+    override init()
+    {
+        super.init()
+        self.delegate = self
+    }
+    override func readFromJSONDictionary(dict: NSDictionary) {
+        super.readFromJSONDictionary(dict)
+        if let returnedUsers = dict["ListOfUsers"] as? NSArray
+        {
+            for dict in returnedUsers
+            {
+                let user = User()
+                user.readFromJSONDictionary(dict as! NSDictionary)
+                self.users.append(user)
+            }
+        }
+    }
+    override func getJSONDictionary() -> NSDictionary {
+        let dict = super.getJSONDictionary()
+        return dict
+    }
+    override func getJSONDictionaryString() -> NSString {
+        return super.getJSONDictionaryString()
+    }
 }
 
 class Hobby: SFLBaseModel,NSCoding {
@@ -101,7 +191,7 @@ class Hobby: SFLBaseModel,NSCoding {
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(self.hobbyName,forKey: "HobbyName")
     }
-
+    
     class func deserializeHobbies(hobbies:NSArray)->Array<Hobby>
     {
         var returnArray = Array<Hobby>()

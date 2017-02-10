@@ -72,7 +72,7 @@ class EditHoBShareViewController: HoBShareViewController {
         else
         {
             let alert = UIAlertController.init(title: kAppTitle, message: "Would you like to delete this hobby?", preferredStyle: .ActionSheet)
-            let deleteAction = UIAlertAction.init(title: "Dismiss", style: .Destructive, handler: {(action) in
+            let deleteAction = UIAlertAction.init(title: "Delete", style: .Destructive, handler: {(action) in
                 self.myHobbies!.removeAtIndex(indexPath.item)
                 self.saveHobbies()
                 })

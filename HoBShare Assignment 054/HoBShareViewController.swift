@@ -23,7 +23,7 @@ class HoBShareViewController: UIViewController,CLLocationManagerDelegate,UIColle
     }
     
     let locationManager = CLLocationManager()
-    var currentLocation = CLLocation.init()
+    var currentLocation : CLLocation!
     
     
     override func viewWillAppear(animated: Bool) {

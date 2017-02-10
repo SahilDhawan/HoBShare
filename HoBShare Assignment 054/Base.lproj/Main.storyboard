@@ -61,6 +61,9 @@
                                         </view>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <size key="customSize" width="100" height="50"/>
+                                        <connections>
+                                            <outlet property="HobbyLabel" destination="qpf-NH-9fD" id="gh3-Rq-JY5"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
