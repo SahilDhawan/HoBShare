@@ -62,8 +62,8 @@ class MeViewController: HoBShareViewController,UITextFieldDelegate {
     {
         textField.resignFirstResponder()
         let requestUser = User(userName:textField.text!)
-        requestUser.latitude = currentLocation.coordinate.latitude
-        requestUser.longitude = currentLocation.coordinate.longitude
+        requestUser.latitude = currentLocation!.coordinate.latitude
+        requestUser.longitude = currentLocation!.coordinate.longitude
         
         UserDP().getAccountForUser(requestUser){(returnedUser) in
             
@@ -82,4 +82,4 @@ class MeViewController: HoBShareViewController,UITextFieldDelegate {
 
         
     }
-}
+    }

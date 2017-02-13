@@ -13,6 +13,7 @@ class NeighboursViewController: HoBShareViewController,MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     var users : [User]?
+    var firstCell : HobbyCollectionViewCell? = nil
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -38,14 +39,20 @@ class NeighboursViewController: HoBShareViewController,MKMapViewDelegate {
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        if firstCell != nil
+        {
+            firstCell!.backgroundColor = UIColor.grayColor()
+        }
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! HobbyCollectionViewCell
+        cell.backgroundColor = UIColor.redColor()
+        firstCell = cell
         if let users = self.users
         {
             mapView.removeAnnotations(users)
         }
         self.fetchUsersWithHobby(myHobbies![indexPath.row])
-        let cell = collectionView.dataSource?.collectionView(collectionView, cellForItemAtIndexPath: indexPath)  as! HobbyCollectionViewCell
-        cell.backgroundColor = UIColor.redColor()
     }
+
     
     func fetchUsersWithHobby(hobby:Hobby)
     {

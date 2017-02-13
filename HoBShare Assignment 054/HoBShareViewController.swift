@@ -30,7 +30,7 @@ class HoBShareViewController: UIViewController,CLLocationManagerDelegate,UIColle
         
         super.viewWillAppear(animated)
         locationManager.delegate = self
-        
+        self.collectionView.allowsMultipleSelection = true
         if CLLocationManager.authorizationStatus() == .NotDetermined
         {
             locationManager.requestWhenInUseAuthorization()
@@ -97,7 +97,7 @@ class HoBShareViewController: UIViewController,CLLocationManagerDelegate,UIColle
         let cell:HobbyCollectionViewCell =
             collectionView.dequeueReusableCellWithReuseIdentifier("HobbyCollectionViewCell",
                                                                   forIndexPath: indexPath)as! HobbyCollectionViewCell
-
+        cell.backgroundColor = UIColor.darkGrayColor()
         if collectionView == self.collectionView
         {
             let hobby = myHobbies![indexPath.item]
@@ -108,6 +108,7 @@ class HoBShareViewController: UIViewController,CLLocationManagerDelegate,UIColle
             let key = Array(availableHobbies.keys)[indexPath.section]
             let hobbies = availableHobbies[key]
             let hobby = hobbies![indexPath.item]
+           
             cell.HobbyLabel.text = hobby.hobbyName!
         }
         return cell
@@ -134,7 +135,6 @@ class HoBShareViewController: UIViewController,CLLocationManagerDelegate,UIColle
                 let dynamicCellSize = CGSize.init(width: dynamicCellWidth, height: height)
                 return dynamicCellSize
     }
-    
     func saveHobbiesToUserDefaults()
     {
         let hobbyData = NSKeyedArchiver.archivedDataWithRootObject(myHobbies!)

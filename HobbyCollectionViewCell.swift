@@ -11,4 +11,5 @@ import UIKit
 class HobbyCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var HobbyLabel: UILabel!
+//    var currentHobby : Bool =  false
 }

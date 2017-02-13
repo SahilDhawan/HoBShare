@@ -26,14 +26,21 @@ extension Array
     }
     func toString()->String
     {
-        var returnString = (self[0] as!Hobby).hobbyName!
+        var returnString = ""
         if allValueAreHobbies == true
         {
-            for i in 1...self.count - 1
+            for i in 0...self.count - 1
             {
                 let value = self[i] as! Hobby
-                
+                if i == 0
+                {
+                    returnString += value.hobbyName!
+                }
+                else
+                {
                     returnString  +=  ", " + value.hobbyName!
+
+                }
             }
         }
         return returnString
