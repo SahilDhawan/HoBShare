@@ -14,6 +14,7 @@
 		BABBC1951E3DF93B00FF1C37 /* SFLConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBC1931E3DF93B00FF1C37 /* SFLConnection.swift */; };
 		BABBC1971E3DFC9A00FF1C37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBC1961E3DFC9A00FF1C37 /* Constants.swift */; };
 		BABBC1991E3E029000FF1C37 /* SFLBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABBC1981E3E029000FF1C37 /* SFLBaseModel.swift */; };
+		BACB2C0F1E5213D90008DCB5 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = BACB2C0E1E5213D90008DCB5 /* splash.png */; };
 		BADAE3E81E2B7FE00019DE01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAE3E71E2B7FE00019DE01 /* AppDelegate.swift */; };
 		BADAE3EA1E2B7FE00019DE01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAE3E91E2B7FE00019DE01 /* ViewController.swift */; };
 		BADAE3ED1E2B7FE00019DE01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADAE3EB1E2B7FE00019DE01 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		BABBC1931E3DF93B00FF1C37 /* SFLConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SFLConnection.swift; path = ../../../Downloads/StarterKit/SFLConnection.swift; sourceTree = "<group>"; };
 		BABBC1961E3DFC9A00FF1C37 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BABBC1981E3E029000FF1C37 /* SFLBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SFLBaseModel.swift; path = ../../../Downloads/StarterKit/SFLBaseModel.swift; sourceTree = "<group>"; };
+		BACB2C0E1E5213D90008DCB5 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = ../../../../Downloads/StarterKit/splash.png; sourceTree = "<group>"; };
 		BADAE3E41E2B7FE00019DE01 /* HoBShare Assignment 054.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HoBShare Assignment 054.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADAE3E71E2B7FE00019DE01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BADAE3E91E2B7FE00019DE01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				BADAE3EB1E2B7FE00019DE01 /* Main.storyboard */,
 				BADAE4081E2B959A0019DE01 /* HoBShareViewController.swift */,
 				BABBC1961E3DFC9A00FF1C37 /* Constants.swift */,
+				BACB2C0E1E5213D90008DCB5 /* splash.png */,
 				BADAE40C1E2B967A0019DE01 /* EditHoBShareViewController.swift */,
 				BA25459A1E37B90700F463B5 /* Modals.swift */,
 				BA25459C1E37B94C00F463B5 /* DataProviders.swift */,
@@ -169,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BACB2C0F1E5213D90008DCB5 /* splash.png in Resources */,
 				BADAE3F21E2B7FE00019DE01 /* LaunchScreen.storyboard in Resources */,
 				BADAE3EF1E2B7FE00019DE01 /* Assets.xcassets in Resources */,
 				BADAE3ED1E2B7FE00019DE01 /* Main.storyboard in Resources */,
